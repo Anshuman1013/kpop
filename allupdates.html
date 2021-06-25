@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="allupdates.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" href="images/finallogo.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>All Updates</title>
+  </head>
+
+  <body>
+    <!-- NAV BAR-->
+    <nav>
+      <a href="index.html"
+        ><img class="finallogo" src="images/finallogo.png" alt="logo picture" />
+      </a>
+
+      <a class="logo"> Mykpop </a>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="allupdates.html">All Updates</a>
+        </li>
+        <li>
+          <a href="Contact Form/contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <div class="burger" onclick="myFunction()">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <!-- NAV BAR-->
+    <main>
+      <section class="glass">
+        <div class="games">
+          <h2>Stories</h2>
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <script>
+    function navSlide() {
+      const burger = document.querySelector(".burger");
+      const nav = document.querySelector(".nav-links");
+      const navLinks = document.querySelectorAll(".nav-links li");
+
+      burger.addEventListener("click", () => {
+        //Toggle Nav
+        nav.classList.toggle("nav-active");
+
+        //Animate Links
+        navLinks.forEach((link, index) => {
+          if (link.style.animation) {
+            link.style.animation = "";
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.5
+            }s`;
+          }
+        });
+        //Burger Animation
+        burger.classList.toggle("toggle");
+      });
+    }
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    navSlide();
+  </script>
+</html>

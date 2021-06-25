@@ -1,0 +1,336 @@
+
+#container
+{
+  margin-left: 5em;  
+  height: 500px;
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.sliders
+{
+  margin-top: 3em;
+    height: 500px;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+.cards
+{
+    height: 410px;
+    width: 320px;
+    margin: 0px 25px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 3px 3px 3px rgba(255,255,255,0.8),inset -3px -3px 4px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+}
+.messages
+{
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.owl-nav
+{
+    display: none;
+}
+.owl-dot
+{
+    display: none;
+}
+.owl-stage
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+.fire,.latest-stories{
+  display: inline-block;
+  vertical-align: middle
+  
+}
+.fire{
+  height: 3em;
+  position: relative;
+  margin-left: 10em;
+  margin-right: 1em;
+  /* animation: myfirst 30s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards; */
+
+}
+.latest-stories{
+  margin-left:10px;
+  font-size: 40px;
+  font-weight:500;
+  color: #a4508b;
+
+
+}
+
+.twitter,.tweets{
+  display: inline-block;
+  vertical-align: middle
+  
+}
+.tweets{
+ margin-left: 1em;
+ text-align: center;
+  font-size: 40px;
+  color: #00acee;
+  font-weight:500;
+}
+.twitter{
+  height: 3em;
+  position: relative;
+  margin-left: 11.5em;
+  /* animation: myfirst 30s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards; */
+
+}
+/* @keyframes myfirst {
+  0%   { left: 0px; top: 0px;}
+ 25%  {left: 110px; top: 0px;}
+  50%  {left: 110px; top: 0px;}
+  75%  {left: 110px; top: 0px;}
+  100% {left: 110px; top: 0px;}
+} */
+
+.heading {
+  color: azure;
+}
+.finallogo {
+  height: 40px;
+  width: 50px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.main-content,
+.sidebar {
+  border-radius: 12px;
+  box-shadow: 5px 10px grey;
+  margin: 5vh 5vh 5vh;
+  padding: 4vh;
+  position:relative;
+}
+.main-content {
+  background: lightgray;
+}
+.sidebar {
+  background: lightgray;
+}
+.grid-parent {
+  display: grid;
+  grid-template-columns:50% 50%;
+  gap: 1vh;
+  background: #141414;
+
+
+
+}
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: #141414;
+  align-items: center;
+  min-height: 7vh;
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-family: "Lora", serif;
+  transform: translate(-50%, -50%);
+  justify-content: space-around;
+  margin-top: 1.2em;
+  margin-left: 5em;
+  color: #ffffff;
+  background: linear-gradient(to right, grey 0, white 10%, grey 20%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s infinite linear;
+  animation-fill-mode: forwards;
+  white-space: nowrap;
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  position: relative;
+  color: rgba(199, 197, 197, 0.534);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.nav-links a:after {
+  content: "";
+  position: absolute;
+  background-color: #ff3c78;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: white;
+}
+.nav-links a:hover:after {
+  width: 100%;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 5px;
+  height: 5px;
+  margin: 4px;
+  border-radius: 100%;
+  background-color: white;
+}
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  
+  .latest-stories{
+    text-align: center;
+    font-size: 30px;
+    color: #a4508b;
+    font-weight:500;
+  }
+  .fire{
+    margin-left: 3.5em;
+    position: relative;
+    height: 2em;
+    position: relative;
+    /* animation: myfirst 10s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards; */
+  
+  }
+
+  .tweets{
+    text-align: center;
+    font-size: 30px;
+    color: #00acee;
+    font-weight:500;
+  }
+  .twitter{
+    margin-left: 3.5em;
+    position: relative;
+    height: 2em;
+    position: relative;
+    /* animation: myfirst 10s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards; */
+  
+  }
+  /* @keyframes myfirst {
+    0%   { left: 0px; top: 0px;}
+   25%  {left: 50px; top: 0px;}
+    50%  {left: 50px; top: 0px;}
+    75%  {left: 50px; top: 0px;}
+    100% {left: 50px; top: 0px;}
+  } */
+
+
+
+  body {
+    overflow-x: hidden;
+  }
+  .grid-parent{
+    grid-template-columns:100%;
+  }
+  
+  .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 92vh;
+    top: 10vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
